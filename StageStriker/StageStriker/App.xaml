@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StageStriker.App">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <Color x:Key="Player1Color" x:FactoryMethod="FromHex">
+                <x:Arguments>
+                    <x:String>#ffcc33</x:String>
+                </x:Arguments>
+            </Color>
+            <Color x:Key="Player1ColorText" x:FactoryMethod="FromHex">
+                <x:Arguments>
+                    <x:String>#63350d</x:String>
+                </x:Arguments>
+            </Color>
+            <Color x:Key="Player2Color" x:FactoryMethod="FromHex">
+                <x:Arguments>
+                    <x:String>#2d329e</x:String>
+                </x:Arguments>
+            </Color>
+            <Color x:Key="Player2ColorText" x:FactoryMethod="FromHex">
+                <x:Arguments>
+                    <x:String>#000033</x:String>
+                </x:Arguments>
+            </Color>
+            <Color x:Key="DarkBackground" x:FactoryMethod="FromHex">
+                <x:Arguments>
+                    <x:String>#333333</x:String>
+                </x:Arguments>
+            </Color>
+            <Color x:Key="TitleColor" x:FactoryMethod="FromHex">
+                <x:Arguments>
+                    <x:String>#333333</x:String>
+                </x:Arguments>
+            </Color>
+            <Style x:Key="TitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TitleColor}"/>
+                <Setter Property="FontSize" Value="35"/>
+            </Style>
+            <Style x:Key="Player1Style" TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource Player1Color}"/>
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+            <Style x:Key="Player2Style" TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource Player2Color}"/>
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

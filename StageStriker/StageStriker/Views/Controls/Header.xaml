@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StageStriker.Views.Controls.Header">
+    <ContentView.Content>
+        <Grid RowSpacing="0" BackgroundColor="WhiteSmoke">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Need to set background color to be player color-->
+            <Label Grid.ColumnSpan="3"  BackgroundColor="Red"/>
+            <Label Grid.Row="0" Grid.Column="1" Text="ROUND 1" TextColor="Black" FontFamily="sans-serif" FontSize="25" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="0,0,0,9"/>
+            <Image Grid.Row="0" Grid.Column="0" Source="btn_hamburger.png" HeightRequest="25" HorizontalOptions="Start" VerticalOptions="End" Margin="7,0,0,7"/>
+            <Image Grid.Row="0" Grid.Column="2" Source="btn_clear.png" HeightRequest="25" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,7,7"/>
+
+            <Label Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" Text="{Binding ActionLabelText}" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="{Binding ActionLabelColor}"/>
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="0" Orientation="Horizontal" Spacing="0">
+                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Player1Name}" TextColor="{StaticResource Player1Color}" FontSize="15" Margin="0,0,0,0"/>
+                <Image Source="btn_switch_players.png" HeightRequest="25" VerticalOptions="Center"/>
+                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Player2Name}" TextColor="{StaticResource Player2Color}" FontSize="15" Margin="0,0,0,0" HorizontalTextAlignment="End"/>
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

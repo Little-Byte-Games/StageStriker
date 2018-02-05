@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StageStriker.Views.Controls.StageButtonView">
+  <ContentView.Content>
+        <Grid HorizontalOptions="Fill">
+          <Image x:Name="StageImage" Aspect="AspectFill">
+              <Image.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="OnTapped" />
+              </Image.GestureRecognizers>
+          </Image>
+          <Grid x:Name="StageOverlay" InputTransparent="True" IsVisible="False">
+              <Image Source="btn_stage_struck_bg.png" Aspect="Fill" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"/>
+              <Image Source="btn_stage_struck_x_tall.png" Aspect="Fill" VerticalOptions="Fill" HorizontalOptions="Center"/>
+          </Grid>
+          <Image x:Name="StageNameBox" VerticalOptions="Center" HorizontalOptions="Center" Source="btn_stagenamebox.png" Opacity="0.4" HeightRequest="25" Aspect="Fill"/>
+          <Label x:Name="StageName" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

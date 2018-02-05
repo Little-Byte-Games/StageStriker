@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:StageStriker.Views.Controls;assembly=StageStriker"
+             x:Class="StageStriker.Views.Controls.StageGroupView">
+    <ContentView.Content>
+        <Grid ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="30" />
+            </Grid.ColumnDefinitions>
+
+            <controls:WinBannerGroup Grid.Column="0" x:Name="WinBanners1"/>
+            <Grid Grid.Column="1" x:Name="ButtonGrid" BackgroundColor="Black" RowSpacing="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid x:Name="GroupedStages" Grid.Row="1" HorizontalOptions="FillAndExpand" ColumnSpacing="2"/>
+            </Grid>
+            <controls:WinBannerGroup Grid.Column="2" x:Name="WinBanners2"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

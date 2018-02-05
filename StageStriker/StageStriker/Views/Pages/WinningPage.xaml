@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<stageStriker:BoundView x:TypeArguments="stageStriker:WinningViewModel" xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:stageStriker="clr-namespace:StageStriker;assembly=StageStriker"
+             x:Class="StageStriker.Views.Pages.WinningPage">
+    <ContentView.Content>
+      <AbsoluteLayout x:Name="PlayerButtons" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="{StaticResource DarkBackground}">
+          <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,0.24">
+              <Image x:Name="CurrentStageImage" Source="{Binding StageImageSource}" Aspect="AspectFill" VerticalOptions="Center"/>
+              <Label x:Name="CurrentStageLabel" Text="{Binding StageName}" FontSize="40" HorizontalOptions="FillAndExpand" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
+          </Grid>
+          <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,1,1,0.76" Margin="15">
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width ="*"/>
+                  <ColumnDefinition Width ="7.5"/>
+                  <ColumnDefinition Width ="*"/>
+              </Grid.ColumnDefinitions>
+              <Button Grid.Column="0" x:Name="Player1WinButton" Command="{Binding WonButtonClicked}" CommandParameter="1" Text="{Binding Player1Label}" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource Player1Color}"/>
+              <Button Grid.Column="2" x:Name="Player2WinButton" Command="{Binding WonButtonClicked}" CommandParameter="2" Text="{Binding Player2Label}" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource Player2Color}"/>
+          </Grid>
+      </AbsoluteLayout>
+    </ContentView.Content>
+</stageStriker:BoundView>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StageStriker.Views.SamTestPage">
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid>
+                <StackLayout>
+                    <Image x:Name="Background" Aspect="AspectFill"/>
+                </StackLayout>
+                <Button x:Name="BtnBackgroundSwitch" Clicked="AnimateGo" Text="Strike" VerticalOptions="End" HorizontalOptions="Center" Margin="50" WidthRequest="150" HeightRequest="75"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="25">
+                    <Image x:Name="Go_G" Source="go_g.png" Opacity="0" HeightRequest="120"/>
+                    <Image x:Name="Go_O" Source="go_o.png" Opacity="0" HeightRequest="120"/>
+                    <Image x:Name="Go_Exclam" Source="go_exclam.png" Opacity="0" HeightRequest="120"/>
+                </StackLayout>
+            </Grid>
+
+            <Grid x:Name="SplashScreen">
+                <Image Source="splash_bg.png" Aspect="Fill"/>
+                <StackLayout Margin="20, 200">
+                    <Image x:Name="Logo_Image" Source="splash_logo_image.png" HeightRequest="50" Opacity="0"/>
+                    <Image x:Name="Logo_Little" Source="splash_logo_little.png" HeightRequest="25" Opacity="0"/>
+                    <Image x:Name="Logo_Byte" Source="splash_logo_byte.png" HeightRequest="30" Opacity="0"/>
+                    <Image x:Name="Subtitle" Source="splash_subtitle.png" Margin="40" Opacity="0"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
